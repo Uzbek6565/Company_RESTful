@@ -10,12 +10,13 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"corpName", "address_id"})})
 public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String corpName;
 
     @Column(nullable = false)

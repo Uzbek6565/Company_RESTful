@@ -13,6 +13,6 @@ public class CompanyDto {
     @NotNull(message = "Director name can not be empty")
     private String directorName;
 
-    @NotNull(message = "Address can not be empty")
+    @NotNull(message = "Address is not selected")
     private Integer addressId;
 }

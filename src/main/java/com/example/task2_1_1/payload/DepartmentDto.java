@@ -10,5 +10,6 @@ public class DepartmentDto {
     @NotNull(message = "Department name can not be empty")
     private String name;
 
+    @NotNull(message = "Company is not selected")
     private Integer companyId;
 }

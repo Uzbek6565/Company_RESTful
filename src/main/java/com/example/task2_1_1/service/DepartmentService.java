@@ -64,7 +64,7 @@ public class DepartmentService {
         Optional<Department> departmentOptional = departmentRepository.findById(id);
         if (departmentOptional.isEmpty())
             return new ResponseApi("Department not found", false);
-        departmentRepository.deleteById(id);
+        departmentRepository.delete(departmentOptional.get());
         return new ResponseApi("Department is deleted", true);
     }
 }
